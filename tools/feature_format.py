@@ -47,7 +47,7 @@ def featureFormat( dictionary, features, remove_NaN=True, remove_all_zeroes=True
         NOTE: first feature is assumed to be 'poi' and is not checked for
             removal for zero or missing values.
     """
-
+    
 
     return_list = []
 
@@ -98,8 +98,10 @@ def featureFormat( dictionary, features, remove_NaN=True, remove_all_zeroes=True
         ### Append the data point if flagged for addition.
         if append:
             return_list.append( np.array(tmp_list) )
+            #return_list.append(tmp_list)
 
     return np.array(return_list)
+    #return return_list
 
 
 def targetFeatureSplit( data ):
